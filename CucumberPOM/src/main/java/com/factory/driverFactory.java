@@ -16,8 +16,9 @@ public class driverFactory {
      public WebDriver initializeDriver(String browser) {
     	 System.out.println("Browser is = " + browser);
     	 if(browser.equalsIgnoreCase("Chrome")) {
-    		 WebDriverManager.chromedriver().setup();
-    		 //System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resource/browserDrivers/chromedriver");
+    		// System.setProperty("webdriver.chrome.driver","/Users/sami/eclipse-workspace/MySeleniumPractice/BrowserDriver/chromedriver");
+    		 //WebDriverManager.chromedriver().setup();
+    		 System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resource/browserDrivers/chromedriver");
     		 driver=new ChromeDriver();
     		 
     	 }else if(browser.equalsIgnoreCase("Edge")) {
