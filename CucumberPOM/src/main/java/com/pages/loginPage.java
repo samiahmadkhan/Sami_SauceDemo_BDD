@@ -4,6 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class loginPage {
 	private WebDriver driver;
@@ -11,6 +13,7 @@ public class loginPage {
 	private By usernameTxtBox = By.xpath("//input[@placeholder='Username']");
 	private By passTxtBox = By.xpath("//input[@placeholder='Password']");
 	private By loginButton = By.xpath("//input[@type='submit']");
+	
 	
 	public loginPage(WebDriver driver) {
 		this.driver=driver;
@@ -20,11 +23,23 @@ public class loginPage {
 		return driver.getTitle(); 
 	}
 	
-	public void login(String username,String pass) {
+	public ProductsPage login(String username,String pass) {
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebDriverWait wait=new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(usernameTxtBox));
 		driver.findElement(usernameTxtBox).sendKeys(username);
-		driver.findElement(passTxtBox).sendKeys(username);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(passTxtBox));
+		driver.findElement(passTxtBox).sendKeys(pass);
 		driver.findElement(loginButton).click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		
+		return new ProductsPage(driver);
+		
+	}
+	
+	public Boolean verifyErrorMessage(String message) {
+		return driver.findElement(By.xpath("//h3[text()='"+message+"']")).isDisplayed();
+		
 	}
 	
 
