@@ -12,6 +12,7 @@ public class ProductsPage {
 	private By shoppingCartBadge=By.xpath("//a[@class='shopping_cart_link']//span");
 	private By menu=By.xpath("//button[text()='Open Menu']");
 	private By logout=By.xpath("//a[text()='Logout']");
+	private By reset=By.xpath("//a[text()='Reset App State']");
 	private WebElement image;
 	
 	private WebElement product(String productName)
@@ -93,6 +94,20 @@ public class ProductsPage {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(logout));
 		driver.findElement(logout).click();
 	}
+	
+	public void resetAppState() {
+		driver.findElement(menu).click();
+		WebDriverWait wait=new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(reset));
+		driver.findElement(reset).click();
+		driver.findElement(logout).click();
+		
+	}
+	public yourCartPage naviagteYourCartPage() {
+		driver.findElement(shoppingCartBadge).click();
+		return new yourCartPage(driver);
+	}
+	
 	
 	
 }

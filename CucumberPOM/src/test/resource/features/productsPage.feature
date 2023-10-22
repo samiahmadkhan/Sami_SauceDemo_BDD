@@ -16,16 +16,29 @@ Scenario Outline: Correct Products Images are Visible with respect to the Produc
     | problem_user             | secret_sauce | Sauce Labs Bike Light   | bike-light     |
     | performance_glitch_user  | secret_sauce | Sauce Labs Bolt T-Shirt | bolt-shirt     |
     
+ @product @positive @addremove       
+Scenario Outline: User should be able to Logout from Product Page
+       Given User enters "<username>" and "<password>" 
+       And User should land on Products Page
+       When User Logout from Products Page
+       Then User is on login page  
+      
+        Examples:
+    | username                 | password     | Product Name            |
+    | standard_user            | secret_sauce | Sauce Labs Backpack     |
+    | standard_user            | secret_sauce | Sauce Labs Bolt T-Shirt |
     
+    
+       
   @product @positive @addremove       
 Scenario Outline: Add Products to Cart
-      When User enters "<username>" and "<password>"
-      And User adds "<Product Name>" to cart
+      Given User enters "<username>" and "<password>"
+      When User adds "<Product Name>" to cart
       Then Verify Product is added in Shopping Bag
-      And User should be able to remove "<Product Name>" from Products
-      And Verify Product is Removed from Shopping Bag "<Product Name>"
-      And User Logout from Products Page
-      And User is on login page
+      When User should be able to remove "<Product Name>" from Products
+      Then Verify Product is Removed from Shopping Bag "<Product Name>"
+      When User Logout from Products Page
+      Then User is on login page
       
       Examples:
     | username                 | password     | Product Name            |

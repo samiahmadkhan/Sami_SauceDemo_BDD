@@ -10,9 +10,11 @@ import io.cucumber.junit.CucumberOptions;
 	@CucumberOptions(
 			features = {"src/test/resource/features"},
 			glue = {"stepDefinations", "hooks"},
-            tags = "@addremove",
+            tags = "@yourCart",
             monochrome = true,
-			plugin = {"pretty"
+			plugin = {"pretty",
+					"json:target/MyReports/report.json",
+					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 				
 			}
 			
