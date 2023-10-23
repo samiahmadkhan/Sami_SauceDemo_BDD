@@ -13,12 +13,43 @@ Scenario Outline: Add Products to Your Cart and verify they are visible
       Then User lands on Your Cart Page
       And User Verify Products are visible on Your Cart Page
       | Products |
-      | Sauce Labs Backpack     |
+      | <Product Name>|
       Then User Reset App State
 
        
       Examples:
-    | username                 | password     | Product Name            | 
+    | username                 | password     | Product Name            |
     | standard_user            | secret_sauce | Sauce Labs Backpack     | 
     | standard_user            | secret_sauce | Sauce Labs Bolt T-Shirt |
     | problem_user             | secret_sauce | Sauce Labs Bike Light   |
+    
+    
+    
+    @yourCart @positive @addremove        
+Scenario Outline: Add and Remove Products from Your Cart 
+      Given User enters "<username>" and "<password>"
+      When User adds "<Product Name>" to cart  
+      And  User adds "Sauce Labs Bolt T-Shirt" to cart 
+      When User navigated to Your Cart page
+      Then User lands on Your Cart Page
+      And User Verify Products are visible on Your Cart Page
+      | Products |
+      | <Product Name>|
+      | Sauce Labs Bolt T-Shirt |
+      Then User Removes Products "<Product Name>"
+      And User Verify that Product is removed "<Product Name>"
+      And User Verify that Product is removed "Sauce Labs Bolt T-Shirt"
+      Then User Reset App State
+
+       
+      Examples:
+    | username                 | password     | Product Name            |
+    | standard_user            | secret_sauce | Sauce Labs Backpack     | 
+    | problem_user             | secret_sauce | Sauce Labs Bike Light   |
+    
+    
+    
+    
+    
+    
+    

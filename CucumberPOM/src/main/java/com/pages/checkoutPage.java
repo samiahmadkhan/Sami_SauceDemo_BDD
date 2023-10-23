@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class checkoutPage {
 	private WebDriver driver;
+	
+	
 	private By firstName=By.xpath("//input[@placeholder='First Name']");
 	private By lastName=By.xpath("//input[@placeholder='Last Name']");
 	private By postCode=By.xpath("//input[@placeholder='Zip/Postal Code']");
@@ -39,12 +41,7 @@ public class checkoutPage {
 		driver.findElement(continueButton).click();
 	}
 	
-	public void overviewProduct(String Product,String price) {
-		if(yourCartProduct(Product).isDisplayed()) {
-			System.out.println("Product : "+ Product + " is Visible in Overview Page");
-		}else System.out.println("Product : "+ Product + " not Visible");
-		
-	}
+	
 	
 	public boolean finish() {
 		driver.findElement(FinishButton).click();

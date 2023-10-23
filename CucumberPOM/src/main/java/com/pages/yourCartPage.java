@@ -46,7 +46,7 @@ public class yourCartPage {
 		
 		boolean flag = false;
 		for(int i=0;i<list.size();i++) {
-			System.out.println("List Elements = "+list.get(i).getText());
+			System.out.println("List Elements = "+list.get(i).getText()+ " and product name = "+ productName);
 			if(list.get(i).getText().equals(productName)) {
 				flag=true;
 				break;
@@ -62,7 +62,7 @@ public class yourCartPage {
 	
 	public boolean verifyIsProductRemoved_yourCart(String productName) {
 		List<WebElement> list=driver.findElements(By.xpath("//div[@class='cart_list']//div[@class='cart_item_label']//div[@class='inventory_item_name']"));
-		System.out.println("List Elements = "+list);
+		
 		boolean flag = false;
 		for(int i=0;i<list.size();i++) {
 			if(list.get(i).getText().equals(productName)) {

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Oct 23, 2023 01:21:36 am</span></a>
+<a href="#"><span class="badge badge-primary">Oct 23, 2023 06:33:42 pm</span></a>
 </li>
 </ul>
 </div>
@@ -57,11 +57,6 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
-</a>
-</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -71,25 +66,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Oct 23, 2023 01:21:36 am</h3>
+<h3>Oct 23, 2023 06:33:42 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Oct 23, 2023 01:22:33 am</h3>
+<h3>Oct 23, 2023 06:34:30 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -105,12 +100,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> features passed
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>1</b> features failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -128,9 +123,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='33%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>2</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='66%'><b>2</b> scenarios failed,
+<small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -148,10 +143,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='80%'><b>17</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>24</b> steps passed</small></div>
 <div>
-<small data-tooltip='9%'><b>2</b> steps failed,
-<b>2</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -167,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Test that User is able to Successfully add products and See them to Your Cart,":54.487
+"Test that User is able to Successfully add products and See them to Your Cart,":44.664
 };
 </script>
 <div class="row">
@@ -177,28 +172,36 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@positive</td>
-<td>1</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>33.333%</td>
-</tr>
-<tr>
-<td>@yourCart</td>
-<td>1</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>33.333%</td>
-</tr>
-<tr>
 <td>@addremove</td>
-<td>1</td>
 <td>2</td>
 <td>0</td>
 <td>0</td>
-<td>33.333%</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@positive</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ycheckout</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 </tbody>
 </table></div>
@@ -227,21 +230,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 1,
+passParent: 1,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
-failChild: 2,
+passChild: 2,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 17,
-failGrandChild: 2,
+passGrandChild: 24,
+failGrandChild: 0,
 warningGrandChild: 0,
-skipGrandChild: 2,
+skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -255,7 +258,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -263,48 +266,48 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@positive</a><a class="dropdown-item" href="#">@yourCart</a><a class="dropdown-item" href="#">@addremove</a>
+<a class="dropdown-item" href="#">@addremove</a><a class="dropdown-item" href="#">@positive</a><a class="dropdown-item" href="#">@ycheckout</a><a class="dropdown-item" href="#">@test</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Test that User is able to Successfully add products and See them to Your Cart,</p>
             <p class="text-sm">
-              <span>01:21:38 am</span> / <span>00:00:54:487</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>18:33:46 pm</span> / <span>00:00:44:664</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Test that User is able to Successfully add products and See them to Your Cart,</h5>
-<span class='badge badge-success'>10.23.2023 01:21:38</span>
-<span class='badge badge-danger'>10.23.2023 01:22:33</span>
-<span class='badge badge-default'>00:00:54:487</span>
+<h5 class="test-status text-pass">Test that User is able to Successfully add products and See them to Your Cart,</h5>
+<span class='badge badge-success'>10.23.2023 18:33:46</span>
+<span class='badge badge-danger'>10.23.2023 18:34:30</span>
+<span class='badge badge-default'>00:00:44:664</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
-<div class="m-t-10 m-l-5"> and Checkout/Continue</div>
+<div class="m-t-10 m-l-5"> aand complete Checkout Process</div>
 </div>
 </div>
 <div class="accordion mt-4">
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Add Products to Your Cart and verify they are visible</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Complete the Checkout Process</div>
       </div>
     </div>
-        <div class="scenario_outline ">
+        <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Add Products to Your Cart and verify they are visible</div>
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Complete the Checkout Process</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -324,7 +327,12 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And User navigated to Your Cart page</span>
+                    <span>And User adds "Sauce Labs Bolt T-Shirt" to cart</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigated to Your Cart page</span>
       <div>
       </div>
                   </div>
@@ -335,70 +343,38 @@ eventsCount: 5,
                   </div>
                   <div class="step pass-bg">
                     <span>And User Verify Products are visible on Your Cart Page</span>
-      <div><table class='markup-table table '><tr><td>Products</td></tr><tr><td>Sauce Labs Backpack</td></tr></table>
+      <div><table class='markup-table table '><tr><td>Products</td></tr><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bolt T-Shirt</td></tr></table>
       </div>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>Then User Reset App State</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="14"><span class="badge log fail-bg mr-2">Fail</span>Add Products to Your Cart and verify they are visible</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 ">
-                  <div class="step pass-bg">
-                    <span>Given User is on login page</span>
+                    <span>When User Checkout from Your Cart Page</span>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>Given User enters "standard_user" and "secret_sauce"</span>
+                    <span>And User Fill following details</span>
+      <div><table class='markup-table table '><tr><td>FirstName</td><td>LastName</td><td>Postcode</td></tr><tr><td>test1</td><td>user1</td><td>123</td></tr></table>
+      </div>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>When User adds "Sauce Labs Bolt T-Shirt" to cart</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And User navigated to Your Cart page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then User lands on Your Cart Page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step fail-bg">
                     <span>And User Verify Products are visible on Your Cart Page</span>
-      <div><table class='markup-table table '><tr><td>Products</td></tr><tr><td>Sauce Labs Backpack</td></tr></table>
+      <div><table class='markup-table table '><tr><td>Products</td></tr><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bolt T-Shirt</td></tr></table>
       </div>
       <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: Product : Sauce Labs Backpack is present on Your Carts Page expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at stepDefinations.yourCartStepDef.User_products_Your_Cart_Page(yourCartStepDef.java:33)
-	at ✽.User Verify Products are visible on Your Cart Page(file:///Users/sami/eclipse-workspace/BDD/sami_ui_api_bdd_framework/CucumberPOM/src/test/resource/features/yourCart.feature:14)
-</textarea>
-      
       </div>
                   </div>
-                  <div class="step skip-bg">
-                    <span>Then User Reset App State</span>
-      <div>Step skipped
+                  <div class="step pass-bg">
+                    <span>Then User Finish the Checkout Process</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User Logout from Products Page</span>
+      <div>
       </div>
                   </div>
               </div>
@@ -406,17 +382,17 @@ eventsCount: 5,
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="25"><span class="badge log fail-bg mr-2">Fail</span>Add Products to Your Cart and verify they are visible</div>
+                  <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Complete the Checkout Process</div>
                 </div>
               </div>
-              <div class="card-body mt-3 ">
+              <div class="card-body mt-3 collapse">
                   <div class="step pass-bg">
                     <span>Given User is on login page</span>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>Given User enters "problem_user" and "secret_sauce"</span>
+                    <span>Given User enters "visual_user" and "secret_sauce"</span>
       <div>
       </div>
                   </div>
@@ -426,7 +402,12 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And User navigated to Your Cart page</span>
+                    <span>And User adds "Sauce Labs Bolt T-Shirt" to cart</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigated to Your Cart page</span>
       <div>
       </div>
                   </div>
@@ -435,26 +416,40 @@ eventsCount: 5,
       <div>
       </div>
                   </div>
-                  <div class="step fail-bg">
+                  <div class="step pass-bg">
                     <span>And User Verify Products are visible on Your Cart Page</span>
-      <div><table class='markup-table table '><tr><td>Products</td></tr><tr><td>Sauce Labs Backpack</td></tr></table>
+      <div><table class='markup-table table '><tr><td>Products</td></tr><tr><td>Sauce Labs Bike Light</td></tr><tr><td>Sauce Labs Bolt T-Shirt</td></tr></table>
       </div>
       <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: Product : Sauce Labs Backpack is present on Your Carts Page expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at stepDefinations.yourCartStepDef.User_products_Your_Cart_Page(yourCartStepDef.java:33)
-	at ✽.User Verify Products are visible on Your Cart Page(file:///Users/sami/eclipse-workspace/BDD/sami_ui_api_bdd_framework/CucumberPOM/src/test/resource/features/yourCart.feature:14)
-</textarea>
-      
       </div>
                   </div>
-                  <div class="step skip-bg">
-                    <span>Then User Reset App State</span>
-      <div>Step skipped
+                  <div class="step pass-bg">
+                    <span>When User Checkout from Your Cart Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User Fill following details</span>
+      <div><table class='markup-table table '><tr><td>FirstName</td><td>LastName</td><td>Postcode</td></tr><tr><td>test2</td><td>user2</td><td>456</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User Verify Products are visible on Your Cart Page</span>
+      <div><table class='markup-table table '><tr><td>Products</td></tr><tr><td>Sauce Labs Bike Light</td></tr><tr><td>Sauce Labs Bolt T-Shirt</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User Finish the Checkout Process</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User Logout from Products Page</span>
+      <div>
       </div>
                   </div>
               </div>
@@ -477,140 +472,22 @@ eventsCount: 5,
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
-<span class='badge log badge-danger'>2</span>
-</span>
-<p class="name">@positive</p>
-<p class="duration text-sm">3 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@positive</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>01:21:38 am</td>
-<td>
-<a href="#" class="linked" test-id='1' id='3'>Add Products to Your Cart and verify they are visible</a>
-<div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>01:22:01 am</td>
-<td>
-<a href="#" class="linked" test-id='1' id='14'>Add Products to Your Cart and verify they are visible</a>
-<div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>01:22:17 am</td>
-<td>
-<a href="#" class="linked" test-id='1' id='25'>Add Products to Your Cart and verify they are visible</a>
-<div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-<span class='badge log badge-danger'>2</span>
-</span>
-<p class="name">@yourCart</p>
-<p class="duration text-sm">3 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@yourCart</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>01:21:38 am</td>
-<td>
-<a href="#" class="linked" test-id='1' id='3'>Add Products to Your Cart and verify they are visible</a>
-<div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>01:22:01 am</td>
-<td>
-<a href="#" class="linked" test-id='1' id='14'>Add Products to Your Cart and verify they are visible</a>
-<div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>01:22:17 am</td>
-<td>
-<a href="#" class="linked" test-id='1' id='25'>Add Products to Your Cart and verify they are visible</a>
-<div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-<span class='badge log badge-danger'>2</span>
+<span class='badge log pass-bg'>2</span>
 </span>
 <p class="name">@addremove</p>
-<p class="duration text-sm">3 tests</p>
+<p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@addremove</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -623,31 +500,21 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>01:21:38 am</td>
+<td>18:33:46 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>Add Products to Your Cart and verify they are visible</a>
+<a href="#" class="linked" test-id='1' id='3'>Complete the Checkout Process</a>
 <div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible</span>
+<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Complete the Checkout Process</span>
 </div>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>01:22:01 am</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:34:11 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='14'>Add Products to Your Cart and verify they are visible</a>
+<a href="#" class="linked" test-id='1' id='19'>Complete the Checkout Process</a>
 <div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>01:22:17 am</td>
-<td>
-<a href="#" class="linked" test-id='1' id='25'>Add Products to Your Cart and verify they are visible</a>
-<div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible</span>
+<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Complete the Checkout Process</span>
 </div>
 </td>
 </tr>
@@ -655,34 +522,18 @@ eventsCount: 5,
 </table>
 </div>
 </li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log pass-bg'>2</span>
 </span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
+<p class="name">@positive</p>
+<p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<h4>@positive</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -693,23 +544,115 @@ eventsCount: 5,
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>01:22:12 am</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:33:46 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='22'>And User Verify Products are visible on Your Cart Page</a>
+<a href="#" class="linked" test-id='1' id='3'>Complete the Checkout Process</a>
 <div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible.And User Verify Products are visible on Your Cart Page</span>
+<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Complete the Checkout Process</span>
 </div>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>01:22:27 am</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:34:11 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='33'>And User Verify Products are visible on Your Cart Page</a>
+<a href="#" class="linked" test-id='1' id='19'>Complete the Checkout Process</a>
 <div class="">
-<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Add Products to Your Cart and verify they are visible.And User Verify Products are visible on Your Cart Page</span>
+<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Complete the Checkout Process</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@ycheckout</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ycheckout</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:33:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Complete the Checkout Process</a>
+<div class="">
+<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Complete the Checkout Process</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:34:11 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Complete the Checkout Process</a>
+<div class="">
+<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Complete the Checkout Process</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@test</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:33:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Complete the Checkout Process</a>
+<div class="">
+<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Complete the Checkout Process</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:34:11 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Complete the Checkout Process</a>
+<div class="">
+<span class="badge badge-default">Test that User is able to Successfully add products and See them to Your Cart,.Complete the Checkout Process</span>
 </div>
 </td>
 </tr>

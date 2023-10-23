@@ -4,12 +4,14 @@ import org.testng.Assert;
 
 import com.factory.driverFactory;
 import com.pages.ProductsPage;
+import com.pages.yourCartPage;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ProductsPageStepDef {
 	private ProductsPage productspage=new ProductsPage(driverFactory.getDriver());
+	private yourCartPage yourCart;
 
 	@Then("User should land on Products Page")
 	public void user_land_on_products_page() {
@@ -70,7 +72,7 @@ public class ProductsPageStepDef {
 	}
 	@When("User navigated to Your Cart page")
 	public void user_navigate_yourCart_Page() {
-		productspage.naviagteYourCartPage();
+		yourCart=productspage.naviagteYourCartPage();
 		
 	}
 	
