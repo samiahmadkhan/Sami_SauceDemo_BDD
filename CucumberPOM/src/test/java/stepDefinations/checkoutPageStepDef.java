@@ -35,6 +35,11 @@ public void user_enter_details(DataTable dataTable) {
 	
 		
 }
+@Then("User Cancel the Checkout Process")
+public void cancel_checkout() {
+	checkout.cancel();
+		
+}
 
 @Then("User Finish the Checkout Process")
 public void finish_checkout() {

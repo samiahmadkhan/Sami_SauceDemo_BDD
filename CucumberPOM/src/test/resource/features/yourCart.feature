@@ -1,5 +1,4 @@
-Feature: Test that User is able to Successfully add products and See them to Your Cart,
-       and Checkout/Continue
+Feature: User is able to Successfully add Product in Your CART 
         
         
 Background: 

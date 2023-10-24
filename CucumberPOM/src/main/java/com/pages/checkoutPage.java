@@ -19,6 +19,7 @@ public class checkoutPage {
 	
 	
 	private By FinishButton=By.xpath("//button[@id='finish']");
+	private By CancelButton=By.xpath("//button[@id='cancel']");
 	
 	private WebElement yourCartProduct(String productName)
 	{   
@@ -47,6 +48,10 @@ public class checkoutPage {
 		driver.findElement(FinishButton).click();
 		
 		return driver.findElement(orderConfirmationMessage).isDisplayed();
+	}
+	public void  cancel() {
+		driver.findElement(CancelButton).click();
+		
 	}
 
 }

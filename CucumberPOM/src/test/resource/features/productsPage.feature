@@ -1,10 +1,10 @@
-Feature: Test that User is able to Successfully add products to Cart
-        , Remove, Logout
+Feature: Test that User is able to Successfully add products,Remove,Logout
+        
         
 Background: 
     Given User is on login page
     
- @product @positive           
+ @product @positive @image          
 Scenario Outline: Correct Products Images are Visible with respect to the Products Name
       When User enters "<username>" and "<password>"
       Then "<Product Name>" and its respective "<ImageName>" should be displayed 

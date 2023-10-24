@@ -5,6 +5,8 @@ package hooks;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import com.factory.driverFactory;
@@ -12,6 +14,7 @@ import com.utility.ConfigReader;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 public class ApplicationHooks {
 private driverFactory df;
@@ -45,5 +48,14 @@ public void quitDriver() {
 		e.printStackTrace();
 	}
 	driver.quit();
+}
+
+@After(order=1)
+public void tearDown(Scenario scenario) {
+	if(scenario.isFailed()) {
+		String screenshotName=scenario.getName().replaceAll(" ", "_");
+		byte[] sourcePath=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+		scenario.attach(sourcePath, "image/png", screenshotName);
+	}
 }
 }

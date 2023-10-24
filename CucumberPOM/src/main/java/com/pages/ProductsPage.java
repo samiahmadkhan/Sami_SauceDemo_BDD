@@ -17,9 +17,9 @@ public class ProductsPage {
 	
 	private WebElement product(String productName)
 	{
-		By product = By.xpath("By.xpath(\"//div[text()='"+productName+"']");
+		By product = By.xpath("//div[text()='"+productName+"']");
 		WebDriverWait wait=new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(product));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(product));
 		
 		return driver.findElement(product);
 	}
