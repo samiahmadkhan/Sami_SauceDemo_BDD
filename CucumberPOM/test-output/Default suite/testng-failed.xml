@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="REST.RestApi_Bdd">
+      <class name="REST.Authorization">
         <methods>
-          <include name="createUserPost"/>
+          <include name="oath1"/>
         </methods>
-      </class> <!-- REST.RestApi_Bdd -->
+      </class> <!-- REST.Authorization -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

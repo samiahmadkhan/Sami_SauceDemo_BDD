@@ -13,10 +13,13 @@ import org.json.JSONObject;
 
 public class RestApi_Bdd {
 	int id;
-	//@Test
+	@Test
 	public void getListUser() {
+		
+		//https://reqres.in/api/users?page=2
 		given().
-		when().get("https://reqres.in/api/users?page=2").
+		pathParam("path", "users").queryParam("page",2).
+		when().get("https://reqres.in/api/{path}").
 		then().
 		assertThat().
 		statusCode(200).
@@ -26,7 +29,7 @@ public class RestApi_Bdd {
 
 	}
 	
-	@Test
+	//@Test
 	public void createUserPost() {
 		
 		JSONObject data=new JSONObject();
@@ -42,7 +45,7 @@ public class RestApi_Bdd {
 //		log().all();
 	}
 	
-	@Test(dependsOnMethods = "createUserPost")
+	//@Test(dependsOnMethods = "createUserPost")
 	public void updateDataPUT() {
 		JSONObject data=new JSONObject();
 		data.put("name", "morpheus");
