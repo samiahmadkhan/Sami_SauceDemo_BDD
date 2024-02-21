@@ -14,12 +14,12 @@
 	<url>http://www.example.com</url>
 
 	<properties>
-		<java.version>20.0.1</java.version>
+		<java.version>17</java.version>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<cucumber.version>6.9.0</cucumber.version>
 		<junit.version>4.13.1</junit.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.version>3.8.1</maven.compiler.version>
+		<maven.compiler.version>3.12.1</maven.compiler.version>
 		<maven.surefire.version>3.1.2</maven.surefire.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -32,12 +32,6 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
-		<dependency>
-			<groupId>com.github.javafaker</groupId>
-			<artifactId>javafaker</artifactId>
-			<version>1.0.2</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
@@ -130,16 +124,24 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.1.2</version>
 		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+
+
+
+		<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
 		<dependency>
-			<groupId>MySeleniumPractice</groupId>
-			<artifactId>MySeleniumPractice</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>1.0.2</version>
 		</dependency>
 		<dependency>
-			<groupId>MySeleniumPractice</groupId>
-			<artifactId>TestNG_Framework</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.28</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
