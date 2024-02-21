@@ -15,12 +15,12 @@ import io.cucumber.junit.CucumberOptions;
 			plugin = {"pretty",
 					"json:target/MyReports/report.json",
 					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-				
+
 			}
 			
 			)
 
-	public class myTestRunner {
+	public class TestRunner {
 
 	}
 
