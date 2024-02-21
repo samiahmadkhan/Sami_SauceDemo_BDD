@@ -1,5 +1,7 @@
 package REST;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
@@ -24,7 +26,7 @@ public class readXMLParse {
 	public void simpleXmlRead() {
 		String name=res.xmlPath().get("TravelerinformationResponse.travelers.Travelerinformation[0].name").toString();
 		System.out.println("Name is equal = "+ name);
-		Assert.assertEquals(name, "Developer");
+		AssertJUnit.assertEquals(name, "Developer");
 
 	}
 	

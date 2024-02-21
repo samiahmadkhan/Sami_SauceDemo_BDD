@@ -1,6 +1,7 @@
 package REST;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import com.google.gson.JsonObject;
 import com.mongodb.operation.CreateUserOperation;

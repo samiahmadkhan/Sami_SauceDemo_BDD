@@ -10,6 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class driverFactory {
      public static  WebDriver driver;
+    
      
      
     
@@ -27,6 +28,7 @@ public class driverFactory {
     		
     	 }else System.out.println("No Browser Exists");
     	 getDriver().manage().window().maximize();
+    	 
     	 
  		  return getDriver();
  		 

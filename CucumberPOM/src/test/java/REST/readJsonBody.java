@@ -1,4 +1,6 @@
 package REST;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
@@ -25,7 +27,7 @@ Response res;
 	@Test
 	public void verifySimpleRes() {
 		String ActualId=res.jsonPath().get("books[1].title").toString();
-		Assert.assertEquals(ActualId,"Learning JavaScript Design Patterns"); //but here its hardcoded
+		AssertJUnit.assertEquals(ActualId,"Learning JavaScript Design Patterns"); //but here its hardcoded
 	}
 	@Test
 	public void usingJSONObj() {
