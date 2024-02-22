@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM
+        "https://testng.org/testng-1.0.dtd">
+<suite name="Open Cart Parallel Suite" verbose="2" parallel="classes" thread-count="5">
+    <test name="Tests">
+
+        <classes>
+            <class name="runner.TestRunnerParallel"/>
+        </classes>
+    </test>
+</suite>
