@@ -5,6 +5,7 @@
 
         <classes>
             <class name="runner.TestRunnerParallel"/>
+             <class name="runner.TestRunner"/>
         </classes>
     </test>
 </suite>
