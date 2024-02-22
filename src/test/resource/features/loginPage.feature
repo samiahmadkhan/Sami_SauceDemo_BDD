@@ -1,7 +1,7 @@
 
 Feature: Test Login Page Functionality where that user is able to Login
   
-  @positive @login
+  @positive @login @sammy
   Scenario Outline: Login with Standard Credentials
     Given User is on login page
     When User enters "<username>" and "<password>"
