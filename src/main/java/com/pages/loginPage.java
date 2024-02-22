@@ -1,5 +1,6 @@
 package com.pages;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -25,7 +26,7 @@ public class loginPage {
 	
 	public ProductsPage login(String username,String pass) {
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(usernameTxtBox));
 		driver.findElement(usernameTxtBox).sendKeys(username);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(passTxtBox));

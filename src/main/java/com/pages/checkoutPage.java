@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class checkoutPage {
 	private WebDriver driver;
 	
@@ -24,7 +26,7 @@ public class checkoutPage {
 	private WebElement yourCartProduct(String productName)
 	{   
 		By product = By.xpath("//div[text()='"+productName+"']");
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(product));
 		
 		return driver.findElement(product);

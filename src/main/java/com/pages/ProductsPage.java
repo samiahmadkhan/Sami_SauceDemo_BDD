@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class ProductsPage {
 	private WebDriver driver;
 	private By ProductsPageName=By.xpath("//span[@class='title']");
@@ -18,7 +20,7 @@ public class ProductsPage {
 	private WebElement product(String productName)
 	{
 		By product = By.xpath("//div[text()='"+productName+"']");
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(product));
 		
 		return driver.findElement(product);
@@ -27,7 +29,7 @@ public class ProductsPage {
 	{
 		By cartButton = By.xpath("//div[text()='"+productName+"']//parent::div//..//..//following-sibling::div//button[text()='Add to cart']");
 		
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(cartButton));
 		return driver.findElement(cartButton);
 	}
@@ -35,7 +37,7 @@ public class ProductsPage {
 	{
 		By RemoveButton = By.xpath("//div[text()='"+productName+"']//parent::div//..//..//following-sibling::div//button[text()='Remove']");
 		
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(RemoveButton));
 		return driver.findElement(RemoveButton);
 	}
@@ -80,7 +82,7 @@ public class ProductsPage {
 		RemoveCart(productName).click();
 	}
 	public boolean verifyProductisAdded() {
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(shoppingCartBadge));
 		return driver.findElement(shoppingCartBadge).isDisplayed();
 	}
@@ -90,14 +92,14 @@ public class ProductsPage {
 	}
 	public void logoutFromProductPage() {
 		driver.findElement(menu).click();
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(logout));
 		driver.findElement(logout).click();
 	}
 	
 	public void resetAppState() {
 		driver.findElement(menu).click();
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(reset));
 		driver.findElement(reset).click();
 		driver.findElement(logout).click();

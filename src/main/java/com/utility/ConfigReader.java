@@ -13,7 +13,7 @@ public class ConfigReader {
 		FileInputStream file = null;
 		/// Users/sami/eclipse-workspace/BDD/sami_ui_api_bdd_framework/CucumberPOM/src/test/resource/config/config.properties
 		try {
-			file = new FileInputStream(System.getProperty("user.dir") + "/src/test/resource/config/config.properties");
+			file = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/config/config.properties");
 			prop.load(file);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
