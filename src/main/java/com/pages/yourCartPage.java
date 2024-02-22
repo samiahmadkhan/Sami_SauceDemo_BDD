@@ -1,5 +1,6 @@
 package com.pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -17,7 +18,7 @@ public class yourCartPage {
 	private WebElement yourCartProduct(String productName)
 	{   
 		By product = By.xpath("//div[text()='"+productName+"']");
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(product));
 		
 		return driver.findElement(product);
@@ -27,7 +28,7 @@ public class yourCartPage {
 	{
 		By RemoveButton = By.xpath("//div[text()='"+productName+"']//parent::div//..//..//following-sibling::div//button[text()='Remove']");
 		
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(RemoveButton));
 		return driver.findElement(RemoveButton);
 	}
@@ -74,7 +75,7 @@ public class yourCartPage {
 	}
 	
 	public checkoutPage checkout() {
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(checkoutButton));
 		driver.findElement(checkoutButton).click();
 		

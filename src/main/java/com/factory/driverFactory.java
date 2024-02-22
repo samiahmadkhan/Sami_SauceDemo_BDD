@@ -9,34 +9,28 @@ import org.openqa.selenium.edge.EdgeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class driverFactory {
-     public static  WebDriver driver;
-    
-     
-     
-    
+     public WebDriver driver;
+	 public static ThreadLocal<WebDriver> tDriver=new ThreadLocal<>();
      public WebDriver initializeDriver(String browser) {
     	 System.out.println("Browser is = " + browser);
     	 if(browser.equalsIgnoreCase("Chrome")) {
     		// System.setProperty("webdriver.chrome.driver","/Users/sami/eclipse-workspace/MySeleniumPractice/BrowserDriver/chromedriver");
     		 //WebDriverManager.chromedriver().setup();
-    		 System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resource/browserDrivers/chromedriver");
-    		 driver=new ChromeDriver();
-    		 
+    		 System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/browserDrivers/chromedriver");
+			 tDriver.set(new ChromeDriver());
     	 }else if(browser.equalsIgnoreCase("Edge")) {
     		 WebDriverManager.edgedriver().setup();
     		 driver=new EdgeDriver();
     		
     	 }else System.out.println("No Browser Exists");
     	 getDriver().manage().window().maximize();
-    	 
-    	 
- 		  return getDriver();
+		 return getDriver();
  		 
     	 
      }
      
-     public static WebDriver getDriver() {
-    	 return driver;
+     public static synchronized WebDriver getDriver() {
+    	 return tDriver.get();
      }
 
 }

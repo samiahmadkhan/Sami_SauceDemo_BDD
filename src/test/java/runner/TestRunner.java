@@ -1,16 +1,18 @@
-package Testrunner;
+package runner;
 
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.testng.annotations.DataProvider;
 
 //i have added sparks report which will be generate in locations: CucumberPOM/test-output/SparkReport
 	@RunWith(Cucumber.class)
 	@CucumberOptions(
-			features = {"src/test/resource/features"},
+			features = {"src/test/resources/features"},
 			glue = {"stepDefinations", "hooks"},
-            //tags = "@image",
+            //tags = "@sammy",
             monochrome = true,
 			plugin = {"pretty",
 					"json:target/MyReports/report.json",
@@ -21,6 +23,5 @@ import io.cucumber.junit.CucumberOptions;
 			)
 
 	public class TestRunner {
-
-	}
+}
 
