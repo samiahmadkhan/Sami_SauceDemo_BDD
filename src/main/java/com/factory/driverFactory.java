@@ -16,7 +16,7 @@ public class driverFactory {
     	 if(browser.equalsIgnoreCase("Chrome")) {
     		// System.setProperty("webdriver.chrome.driver","/Users/sami/eclipse-workspace/MySeleniumPractice/BrowserDriver/chromedriver");
     		 //WebDriverManager.chromedriver().setup();
-    		 System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/browserDrivers/chromedriver");
+    		// System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/browserDrivers/chromedriver");
 			 tDriver.set(new ChromeDriver());
     	 }else if(browser.equalsIgnoreCase("Edge")) {
     		 WebDriverManager.edgedriver().setup();

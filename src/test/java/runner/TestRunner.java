@@ -12,8 +12,9 @@ import org.testng.annotations.DataProvider;
 	@CucumberOptions(
 			features = {"src/test/resources/features"},
 			glue = {"stepDefinations", "hooks"},
-            //tags = "@sammy",
+            tags = "@selectorHub",
             monochrome = true,
+			dryRun = false,
 			plugin = {"pretty",
 					"json:target/MyReports/report.json",
 					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
