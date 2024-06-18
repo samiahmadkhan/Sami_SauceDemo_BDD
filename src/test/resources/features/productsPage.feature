@@ -1,6 +1,4 @@
 Feature: Test that User is able to Successfully add products,Remove,Logout
-        
-        
 Background: 
     Given User is on login page
     

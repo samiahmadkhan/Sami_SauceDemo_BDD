@@ -1,6 +1,4 @@
-Feature: User is able to Successfully add Product in Your CART 
-        
-        
+Feature: User is able to Successfully add Product in Your CART
 Background: 
     Given User is on login page
     

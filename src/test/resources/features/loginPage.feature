@@ -6,7 +6,7 @@ Feature: Test Login Page Functionality where that user is able to Login
     Given User is on login page
     When User enters "<username>" and "<password>"
     Then User should land on Products Page
-    
+
     Examples:
     | username                 | password     |
     | standard_user            | secret_sauce |
@@ -20,7 +20,7 @@ Feature: Test Login Page Functionality where that user is able to Login
     Then User gets "<errorMessage>"
     
     Examples:
-    | username          | password     | errorMessage |                      
+    | username          | password     | errorMessage |
     | locked_out_user   | secret_sauce | Epic sadface: Sorry, this user has been locked out. |
     |                   | secret_sauce | Epic sadface: Username is required |
     | standard_user     |              | Epic sadface: Password is required |

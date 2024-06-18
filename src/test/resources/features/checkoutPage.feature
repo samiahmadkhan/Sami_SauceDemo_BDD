@@ -1,7 +1,4 @@
 Feature: User is able to Checkout Successfully of added products
-       
-        
-        
 Background: 
     Given User is on login page 
  
