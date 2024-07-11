@@ -24,6 +24,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<dep.slf4j.version>1.7.30</dep.slf4j.version>
+		<!--> thios is property configured in jenkins to run test in cross browser testing-->
+		<browserProperty>Chrome</browserProperty>
 	</properties>
 
 	<dependencies>
@@ -169,6 +171,9 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/testngParallel.xml</suiteXmlFile>
 					</suiteXmlFiles>
+					<systemPropertyVariables>
+						<browserProperty>${browserProperty}</browserProperty>
+					</systemPropertyVariables>
 
 				</configuration>
 			</plugin>
