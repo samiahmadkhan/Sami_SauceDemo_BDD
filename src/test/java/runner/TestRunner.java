@@ -12,7 +12,7 @@ import org.testng.annotations.DataProvider;
 	@CucumberOptions(
 			features = {"src/test/resources/features"},
 			glue = {"stepDefinations", "hooks"},
-            tags = "@selectorHub",
+            tags = "@login",
             monochrome = true,
 			dryRun = false,
 			plugin = {"pretty",

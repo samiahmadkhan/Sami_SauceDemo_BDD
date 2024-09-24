@@ -30,7 +30,8 @@ public void getProperty() {
 
 @Before(order = 1)
 public void launchBrowser() {
-	String browser=prop.getProperty("browser");
+	//String browser=prop.getProperty("browser");
+	String browser=System.getProperty("browserProperty");
 	String url=prop.getProperty("url");
 	df=new driverFactory();
 	driver=df.initializeDriver(browser);

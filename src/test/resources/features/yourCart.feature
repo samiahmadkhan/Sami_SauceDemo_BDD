@@ -43,6 +43,7 @@ Scenario Outline: Add and Remove Products from Your Cart
     | username                 | password     | Product Name            |
     | standard_user            | secret_sauce | Sauce Labs Backpack     | 
     | problem_user             | secret_sauce | Sauce Labs Bike Light   |
+
     
     
     
