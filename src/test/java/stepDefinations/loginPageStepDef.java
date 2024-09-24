@@ -36,7 +36,7 @@ public class loginPageStepDef {
 }
 	@Then("User gets {string}")
 	public void user_gets_error_message(String errorMessage) {
-		boolean actual=loginpage.verifyErrorMessage(errorMessage);
+		 boolean actual=loginpage.verifyErrorMessage(errorMessage);
 	     Assert.assertEquals(actual, true,"Verified getting correct Error Message : "+ errorMessage);
 	     
 	}
