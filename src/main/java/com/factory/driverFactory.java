@@ -25,7 +25,7 @@ public class driverFactory {
     private static ThreadLocal<WebDriver> tDriver = new ThreadLocal<>();
 
     public WebDriver initializeDriver(String browser) {
-		browser="Chrome";
+		//browser="Chrome";
         System.out.println("Browser is = " + browser);
 		ConfigReader configReader=new ConfigReader();
 		Properties prop=configReader.initializeProp();
