@@ -9,7 +9,7 @@ Feature: Test Login Page Functionality where that user is able to Login
 
     Examples:
     | username                 | password     |
-    | standard_user            | secret_sauce |
+    | standassrd_user            | secret_sauce |
     | problem_user             | secret_sauce |
     | performance_glitch_user  | secret_sauce |
     
