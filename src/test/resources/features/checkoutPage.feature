@@ -18,6 +18,7 @@ Scenario Outline: Complete the Checkout Process
       | FirstName | LastName | Postcode  |
       |<FirstName>|<LastName>|<Postcode> |
       And User Verify Products are visible on Your Cart Page
+
       | Products      |
       | <Product Name>|
       | Sauce Labs Bolt T-Shirt |
