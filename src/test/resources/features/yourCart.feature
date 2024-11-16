@@ -2,7 +2,7 @@ Feature: User is able to Successfully add Product in Your CART
 Background: 
     Given User is on login page
     
- @yourCart @positive @addremove       
+ @yourCart @positive @addremove @addProSam
 Scenario Outline: Add Products to Your Cart and verify they are visible 
       Given User enters "<username>" and "<password>"
       When User adds "<Product Name>" to cart  
