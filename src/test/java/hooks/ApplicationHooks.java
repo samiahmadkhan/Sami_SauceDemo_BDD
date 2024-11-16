@@ -2,9 +2,13 @@ package hooks;
 
 
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -57,6 +61,13 @@ public void tearDown(Scenario scenario) {
 		String screenshotName=scenario.getName().replaceAll(" ", "_");
 		byte[] sourcePath=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(sourcePath, "image/png", screenshotName);
-	}
+        try {
+            Allure.addAttachment("Screenshot", "image/png",
+					new FileInputStream(new File("target/allure-results/" + scenario.getName() + ".png")), "png");
+        } catch (FileNotFoundException e) {
+
+        }
+
+    }
 }
 }

@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<cucumber.version>6.9.0</cucumber.version>
+		<cucumber.version>7.20.0</cucumber.version>
 		<junit.version>4.13.1</junit.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.version>3.12.1</maven.compiler.version>
@@ -24,6 +24,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<dep.slf4j.version>1.7.30</dep.slf4j.version>
+		<allure.version>2.24.0</allure.version>
 		<!--> thios is property configured in jenkins to run test in cross browser testing-->
 		<browserProperty>Chrome</browserProperty>
 	</properties>
@@ -149,14 +150,34 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.28</version>
 		</dependency>
+		<!-- ALLURE DEPENDENCIES_____________________________________________________________ -->
+		<!-- Allure Cucumber JVM Dependency -->
+
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-cucumber7-jvm</artifactId>
+			<version>2.29.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>29.0.0</version>
+		</dependency>
+
+		<!-- Allure JUnit 5 Dependency -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-junit4</artifactId>
+			<version>2.29.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- ALLURE DEPENDENCIES end_____________________________________________________________ -->
 
 	</dependencies>
 
 	<build>
 
 		<plugins>
-
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -186,6 +207,19 @@
 					</systemPropertyVariables>
 
 				</configuration>
+			</plugin>
+			<!-- Allure Maven Plugin -->
+			<plugin>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-maven</artifactId>
+				<version>2.14.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>

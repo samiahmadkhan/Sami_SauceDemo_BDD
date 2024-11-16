@@ -13,7 +13,6 @@ import com.google.common.collect.Multiset.Entry;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import io.cucumber.messages.internal.com.google.gson.JsonParser;
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;

@@ -14,8 +14,8 @@ import org.testng.annotations.DataProvider;
             monochrome = true,
 			plugin = {"pretty",
 					"json:target/MyReports/report.json",
-					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-
+					"html:target/MyReports/reporthtml.html",
+					"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 			}
 			
 			)
