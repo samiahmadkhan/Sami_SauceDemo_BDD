@@ -62,8 +62,8 @@ public class driverFactory {
 			}
 
 		}else if(prop.getProperty("execution_ENV").equals("BrowserStack")){
-			  final String AUTOMATE_USERNAME = "sami_eyIW3D";
-			  final String AUTOMATE_ACCESS_KEY = "SBWUu2TFMHVdS5qeFjpX";
+			  final String AUTOMATE_USERNAME = "sami_0S2aIu";
+			  final String AUTOMATE_ACCESS_KEY = "YKprwtESk9Cz6zqhU4Cm";
 			  final String URL = "https://" + AUTOMATE_USERNAME + ":" + AUTOMATE_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 

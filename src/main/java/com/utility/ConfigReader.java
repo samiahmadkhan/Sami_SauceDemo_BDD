@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-  private Properties prop;
+  private static Properties prop;
   
-  public Properties initializeProp() {
+  public static Properties initializeProp() {
 		prop = new Properties();
 		FileInputStream file = null;
 		/// Users/sami/eclipse-workspace/BDD/sami_ui_api_bdd_framework/CucumberPOM/src/test/resource/config/config.properties

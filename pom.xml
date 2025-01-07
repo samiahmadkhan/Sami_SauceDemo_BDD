@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>CucumberPOM</groupId>
@@ -27,6 +23,7 @@
 		<allure.version>2.24.0</allure.version>
 		<!--> thios is property configured in jenkins to run test in cross browser testing-->
 		<browserProperty>Chrome</browserProperty>
+		<testngXmlFile>src/test/resources/testng.xml</testngXmlFile>
 	</properties>
 
 	<dependencies>
@@ -171,6 +168,18 @@
 			<version>2.29.0</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+      <groupId>com.browserstack</groupId>
+      <artifactId>browserstack-java-sdk</artifactId>
+      <version>LATEST</version>
+      <scope>compile</scope>
+    </dependency>
 		<!-- ALLURE DEPENDENCIES end_____________________________________________________________ -->
 
 	</dependencies>
@@ -200,8 +209,8 @@
 				<version>${maven.surefire.version}</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testngParallel.xml</suiteXmlFile>
-					</suiteXmlFiles>
+						<suiteXmlFile>${testngXmlFile}</suiteXmlFile>
+					</suiteXmlFiles><argLine>-javaagent:"${com.browserstack:browserstack-java-sdk:jar}"</argLine>
 					<systemPropertyVariables>
 						<browserProperty>${browserProperty}</browserProperty>
 					</systemPropertyVariables>
@@ -221,6 +230,18 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <id>getClasspathFilenames</id>
+            <goals>
+              <goal>properties</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
 		</plugins>
 	</build>

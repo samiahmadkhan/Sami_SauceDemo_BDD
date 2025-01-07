@@ -44,7 +44,7 @@ public class yourCartPage {
 	
 	public boolean isProductVisible(String productName) {
 		List<WebElement> list=driver.findElements(By.xpath("//div[@class='cart_list']//div[@class='cart_item_label']//div[@class='inventory_item_name']"));
-		
+		list.get(0).isDisplayed();
 		boolean flag = false;
 		for(int i=0;i<list.size();i++) {
 			System.out.println("List Elements = "+list.get(i).getText()+ " and product name = "+ productName);
