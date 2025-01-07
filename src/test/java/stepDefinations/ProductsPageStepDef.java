@@ -1,5 +1,6 @@
 package stepDefinations;
 
+import com.FactoryNew.DriverManager;
 import org.testng.Assert;
 
 import com.factory.driverFactory;
@@ -10,7 +11,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ProductsPageStepDef {
-	private ProductsPage productspage=new ProductsPage(driverFactory.getDriver());
+	//private ProductsPage productspage=new ProductsPage(driverFactory.getDriver());
+	private ProductsPage productspage=new ProductsPage(DriverManager.getDriver());
+
+
 	private yourCartPage yourCart;
 
 	@Then("User should land on Products Page")

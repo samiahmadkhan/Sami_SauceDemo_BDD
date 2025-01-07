@@ -3,6 +3,7 @@ package stepDefinations;
 import java.util.List;
 import java.util.Map;
 
+import com.FactoryNew.DriverManager;
 import org.testng.Assert;
 
 import com.factory.driverFactory;
@@ -16,7 +17,9 @@ import io.cucumber.java.en.When;
 
 public class loginPageStepDef {
 	
-	private loginPage loginpage=new loginPage(driverFactory.getDriver());
+	//private loginPage loginpage=new loginPage(DriverManager.getDriver());
+	private loginPage loginpage=new loginPage(DriverManager.getDriver());
+
 	private ProductsPage productPage;
 	
 	@Given("User is on login page")
