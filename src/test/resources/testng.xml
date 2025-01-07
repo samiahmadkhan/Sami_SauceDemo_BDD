@@ -3,6 +3,7 @@
 <suite name="Selector Hub Suite to Practise">
     <listeners>
         <listener class-name="Listners.RetryFailedTestCases" />
+        <listener class-name="Listners.TestExecutionListener" />
     </listeners>
     <test name="fff">
 
