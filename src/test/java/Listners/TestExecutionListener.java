@@ -3,12 +3,14 @@ package Listners;
 import com.Reporting.ExtendReportManager;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import io.cucumber.java.Scenario;
 import org.testng.*;
 
 public class TestExecutionListener implements ITestListener, ISuiteListener {
     ExtendReportManager extendReportManager;
     ExtentReports extentReports;
     ExtentTest extentTest;
+    Scenario scenario;
 
     @Override
     public void onStart(ISuite suite) {
@@ -24,13 +26,14 @@ public class TestExecutionListener implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        extentTest=extentReports.createTest("Test Case Name: "+result.getMethod().getMethodName());
+        System.out.println("I am started Extent test on : onTestStart tag of iTestListner ");
+        extentTest=extentReports.createTest("Test Case Name: ");
 
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        extentTest.pass("Test Case Passed "+result.getTestName());
+        extentTest.pass("Test Case Passed ");
     }
 
     @Override

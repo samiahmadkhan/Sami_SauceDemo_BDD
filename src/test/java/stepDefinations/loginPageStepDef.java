@@ -29,6 +29,14 @@ public class loginPageStepDef {
 		Assert.assertEquals(ActualTitle, "Swag Labs", "User Successfully Landed on Swag Labs Page");
 		
 	}
+	//this is duplicate step
+
+//	@Given("User is on login page")
+//	public void user_is_on_login_page2() {
+//		// Write code here that turns the phrase above into concrete actions
+//		System.out.println("duplicate method");
+//
+//	}
 	@When("User enters {string} and {string}")
 	public void user_enters_and(String username,String password) {
 		
