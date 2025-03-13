@@ -14,7 +14,8 @@ import org.testng.annotations.Listeners;
 			dryRun = false,
 			plugin = {"pretty",
 					"json:target/MyReports/report.json",
-					"rerun:target/failedTest.txt"
+					"rerun:target/failedTest.txt",
+					"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 
 			}
 			
