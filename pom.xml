@@ -215,7 +215,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>${testngXmlFile}</suiteXmlFile>
-					</suiteXmlFiles><argLine>-javaagent:"${com.browserstack:browserstack-java-sdk:jar}"</argLine>
+					</suiteXmlFiles>
 					<systemPropertyVariables>
 						<browserProperty>${browserProperty}</browserProperty>
 					</systemPropertyVariables>

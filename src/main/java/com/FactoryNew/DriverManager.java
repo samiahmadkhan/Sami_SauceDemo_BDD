@@ -14,7 +14,7 @@ public class DriverManager {
     private DriverManager() {
         try {
             executionEnv = System.getProperty("execution_ENV", ConfigReader.initializeProp().getProperty("execution_ENV"));
-            browser = System.getProperty("browser", ConfigReader.initializeProp().getProperty("browser"));
+            browser = System.getProperty("browserProperty", ConfigReader.initializeProp().getProperty("browser"));
 
             if (executionEnv == null || executionEnv.isEmpty()) {
                 throw new IllegalStateException("Execution Environment is not specified. Please configure 'ExecutionEnvironment'.");

@@ -13,18 +13,23 @@ public class CucumberHooks_Updated {
     private ConfigReader configread;
     Properties prop;
     private WebDriver driver;
+
     @Before(order = 0)
     public void getProperty() {
         System.out.println("hi samiiiii in before");
-        configread=new ConfigReader();
-        prop=configread.initializeProp();
-        System.out.println("Execution Environment: " + prop.getProperty("execution_ENV"));
-        System.out.println("Browser: " + prop.getProperty("browser"));
+        configread = new ConfigReader();
+        prop = configread.initializeProp();
+        String browser = System.getProperty("browserProperty", ConfigReader.initializeProp().getProperty("browser"));
+        String executionEnv = System.getProperty("execution_ENV", ConfigReader.initializeProp().getProperty("execution_ENV"));
+
+        System.out.println("Execution Environment: " + executionEnv);
+        System.out.println("Browser: " + browser);
     }
+
     @Before(order = 1)
     public void setUp() {
         // Get WebDriver instance from DriverManager
-        driver=DriverManager.getInstance().getDriver();
+        driver = DriverManager.getInstance().getDriver();
         System.out.println("Initializing WebDriver for thread: " + Thread.currentThread().getId());
         driver.get(prop.getProperty("url"));
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
