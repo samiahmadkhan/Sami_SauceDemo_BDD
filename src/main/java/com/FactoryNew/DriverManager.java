@@ -94,6 +94,8 @@ public class DriverManager {
                 return new LocalExecutionStrategy();
             case "browserstack":
                 return new BrowserStackExecutionStrategy();
+            case "seleniumgrid":
+                return new SeleniumGridExecutionStrategy();
             default:
                 throw new IllegalArgumentException("Unsupported execution environment: " + executionEnv);
         }
